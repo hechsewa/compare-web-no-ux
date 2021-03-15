@@ -1,0 +1,39 @@
+h1 {
+  font-family: 'Sansita', sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  color: #ECDCE8;
+  font-size: 90px;
+}
+
+p {
+  width: 50vw;
+}
+
+#start {
+  display: flex;
+}
+
+.start-img {
+  width: 350px;
+  height: 350px;
+  margin-top: 120px;
+  margin-left: 5vw;
+}
+
+.start-img img {
+  width: 100%;
+  height: auto;
+}
+
+/*footer styling */
+body  {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  min-height: 80px;
+  margin-top: auto;
+}
