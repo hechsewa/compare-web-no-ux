@@ -34,6 +34,7 @@ h2 {
 
 nav {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 20px;
 }
@@ -111,4 +112,24 @@ footer li a {
 
 footer li a:hover {
   opacity: 60%;
+}
+
+/*buttons */
+button {
+  background-color: #ECDCE8;
+  border: none;
+  border-radius: 15px;
+  width: 200px;
+  height:40px;
+  color: #0a0a0e;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size:16px;
+  text-transform: uppercase;
+  letter-spacing: 10%;
+}
+
+button:hover {
+  background-color: #139686;
+  color: #ECDCE8;
 }
