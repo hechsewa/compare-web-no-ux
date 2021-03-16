@@ -1,0 +1,27 @@
+#animation h2 {
+  color: #139686;
+  font-family: 'Sansita', sans-serif;
+  font-size: 50px;
+}
+
+#animation p {
+  font-size: 18px;
+}
+
+#animation ul {
+  color: #ECDCE8;
+  font-family: 'Sansita', sans-serif;
+  font-size: 20px;
+  margin-top: 80px;
+}
+
+#animation ul li {
+  margin-bottom: 50px;
+}
+
+#animation img {
+  width: 80vw;
+  height: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}

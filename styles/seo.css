@@ -1,0 +1,25 @@
+#seo h2 {
+  color: #139686;
+  font-family: 'Sansita', sans-serif;
+  font-size: 50px;
+}
+
+#seo p {
+  font-size: 18px;
+}
+
+.seo-wrap {
+  display: flex;
+  column-gap: 5vw;
+}
+
+.seo-right li {
+  color: #ECDCE8;
+  font-family: 'Sansita', sans-serif;
+  font-size: 22px;
+  margin-bottom: 50px;
+}
+
+.seo-left img {
+  margin-bottom: 50px;
+}
