@@ -1,0 +1,37 @@
+.history-date img {
+  width: auto;
+  height: 200px;
+  filter:grayscale();
+}
+
+.history-date {
+  display: flex;
+  column-gap: 10vw;
+  align-items: center;
+  justify-content: center;
+}
+
+.history-date h4 {
+  color: #ECDCE8;
+  font-family: 'Sansita', sans-serif;
+  font-size: 24px;
+}
+
+#history p {
+  font-size: 16px;
+}
+
+.history-date {
+  margin-top: 80px;
+}
+
+.history-date p {
+  font-size: 22px;
+  width: 400px;
+}
+
+#history h2 {
+  color: #139686;
+  font-family: 'Sansita', sans-serif;
+  font-size: 50px;
+}

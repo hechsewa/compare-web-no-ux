@@ -133,3 +133,8 @@ button:hover {
   background-color: #139686;
   color: #ECDCE8;
 }
+
+mark {
+  background: none;
+  color: #139686;
+}
