@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>User Experience | Web design</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="../styles/main.css">
+<link rel="stylesheet" href="../styles/survey.css">
+<body>
+  <nav>
+    <h2>User Experience</h2>
+    <ul>
+      <li><a href="../index.html">Start</a></li>
+      <li><a href="whyux.html">Dlaczego UX</a></li>
+      <li><a href="history.html">Historia</a></li>
+      <li><a href="animation.html">Animacje</a></li>
+      <li><a href="seo.html">Pozycjonowanie</a></li>
+      <li><a href="web.html">UX i Web design</a></li>
+      <li><a href="survey.html">Ankieta</a></li>
+    </ul> 
+  </nav>
+  
+  <main>
+    <section id="survey">
+      <h2>Podziel się swoimi wrażeniami!</h2>
+      <div class="surv-text">
+        <p>Poniżej znajdziesz ankietę dotyczącą Twoich wrażeń z korzystania z tej strony internetowej. Wypełnij metryczkę oraz kolejne pytania zgodnie z własnymi odczuciami, a następnie użyj przycisku w sekcji Start, aby przejść do drugiego serwisu. Przy wypełnianiu ankiety w drugiej wersji serwisu użyj tego samego pseudonimu.</p>
+        <img src="../images/survey.png"/>
+      </div>
+      <div class="surv-form">
+          <div class="surv-inp">
+            <label for="name">Pseudonim:</label><br/>
+            <input type="text" id="name" name="name"/>
+          </div>
+          <div class="surv-inp">
+            <label for="age">Wiek:</label><br/>
+            <input type="number" id="age" name="age"/>
+          </div>
+          <div class="surv-inp">
+            <label for="gender">Płeć:</label><br/>
+            <div class="surv-radio">
+              <input type="radio" id="female" name="gender" value="female"/>
+              <label for="female">Kobieta</label>
+              <input type="radio" id="male" name="gender" value="male"/>
+              <label for="male">Mężczyzna</label>
+              <input type="radio" id="other" name="gender" value="other"/>
+              <label for="other">Inny</label>
+            </div>
+          </div>
+          <h3>Określ tą wersję serwisu:</h3>
+          <div class="surv-bar"></div>
+          <div class="surv-inp">
+            <label for="zdecydowanie-przeszkadzajacy">przeszkadzający</label>
+              <input type="radio" id="zdecydowanie-przeszkadzajacy" name="wspierajacy" value="1"/>
+              <input type="radio" id="przeszkadzajacy" name="wspierajacy" value="17.5"/>
+              <input type="radio" id="raczej-przeszkadzajacy" name="wspierajacy" value="34"/>
+              <input type="radio" id="neutralny" name="wspierajacy" value="50.5"/>
+              <input type="radio" id="raczej-wspierajacy" name="wspierajacy" value="67"/>
+              <input type="radio" id="wspierajacy" name="wspierajacy" value="83.5"/>
+              <input type="radio" id="zdecydowanie-wspierajacy" name="wspierajacy" value="100"/>
+            <label for="zdecydowanie-wspierajacy">wspierający</label>
+          </div>
+          <div class="surv-bar"></div>
+          <div class="surv-inp">
+            <label for="zdecydowanie-skomplikowany">skomplikowany</label>
+              <input type="radio" id="zdecydowanie-skomplikowany" name="latwy" value="1"/>
+              <input type="radio" id="skomplikowany" name="latwy" value="17.5"/>
+              <input type="radio" id="raczej-skomplikowany" name="latwy" value="34"/>
+              <input type="radio" id="latwy-neutralny" name="latwy" value="50.5"/>
+              <input type="radio" id="raczej-latwy" name="latwy" value="67"/>
+              <input type="radio" id="latwy" name="latwy" value="83.5"/>
+              <input type="radio" id="zdecydowanie-latwy" name="latwy" value="100"/>
+            <label for="zdecydowanie-łatwy">łatwy</label>
+          </div>
+          <div class="surv-bar"></div>
+          <div class="surv-inp">
+            <label for="zdecydowanie-nieefektywny">nieefektywny</label>
+              <input type="radio" id="zdecydowanie-nieefektywny" name="efektywny" value="1"/>
+              <input type="radio" id="nieefektywny" name="efektywny" value="17.5"/>
+              <input type="radio" id="raczej-nieefektywny" name="efektywny" value="34"/>
+              <input type="radio" id="efektywny-neutralny" name="efektywny" value="50.5"/>
+              <input type="radio" id="raczej-efektywny" name="efektywny" value="67"/>
+              <input type="radio" id="efektywny" name="efektywny" value="83.5"/>
+              <input type="radio" id="zdecydowanie-efektywny" name="efektywny" value="100"/>
+            <label for="zdecydowanie-efektywny">efektywny</label>
+          </div>
+          <div class="surv-bar"></div>
+          <div class="surv-inp">
+            <label for="zdecydowanie-zagmatwany">zagmatwany</label>
+              <input type="radio" id="zdecydowanie-zagmatwany" name="przejrzysty" value="1"/>
+              <input type="radio" id="zagmatwany" name="przejrzysty" value="17.5"/>
+              <input type="radio" id="raczej-zagmatwany" name="przejrzysty" value="34"/>
+              <input type="radio" id="przejrzysty-neutralny" name="przejrzysty" value="50.5"/>
+              <input type="radio" id="raczej-przejrzysty" name="przejrzysty" value="67"/>
+              <input type="radio" id="przejrzysty" name="przejrzysty" value="83.5"/>
+              <input type="radio" id="zdecydowanie-przejrzysty" name="przejrzysty" value="100"/>
+            <label for="zdecydowanie-przejrzysty">przejrzysty</label>
+          </div>
+          <div class="surv-bar"></div>
+          <div class="surv-inp">
+            <label for="zdecydowanie-nudny">nudny</label>
+              <input type="radio" id="zdecydowanie-nudny" name="ekscytujacy" value="1"/>
+              <input type="radio" id="nudny" name="ekscytujacy" value="17.5"/>
+              <input type="radio" id="raczej-nudny" name="ekscytujacy" value="34"/>
+              <input type="radio" id="ekscytujacy-neutralny" name="ekscytujacy" value="50.5"/>
+              <input type="radio" id="raczej-ekscytujacy" name="ekscytujacy" value="67"/>
+              <input type="radio" id="ekscytujacy" name="ekscytujacy" value="83.5"/>
+              <input type="radio" id="zdecydowanie-ekscytujacy" name="ekscytujacy" value="100"/>
+            <label for="zdecydowanie-ekscytujacy">ekscytujący</label>
+          </div>
+          <div class="surv-bar"></div>
+          <div class="surv-inp">
+            <label for="zdecydowanie-nieinteresujacy">nieinteresujący</label>
+              <input type="radio" id="zdecydowanie-nieinteresujacy" name="interesujacy" value="1"/>
+              <input type="radio" id="nieinteresujacy" name="interesujacy" value="17.5"/>
+              <input type="radio" id="raczej-nieinteresujacy" name="interesujacy" value="34"/>
+              <input type="radio" id="interesujacy-neutralny" name="wspierinteresujacyajacy" value="50.5"/>
+              <input type="radio" id="raczej-interesujacy" name="interesujacy" value="67"/>
+              <input type="radio" id="interesujacy" name="interesujacy" value="83.5"/>
+              <input type="radio" id="zdecydowanie-interesujacy" name="interesujacy" value="100"/>
+            <label for="zdecydowanie-interesujacy">interesujący</label>
+          </div>
+          <div class="surv-bar"></div>
+          <div class="surv-inp">
+            <label for="zdecydowanie-konwencjonalny">konwencjonalny</label>
+              <input type="radio" id="zdecydowanie-konwencjonalny" name="pomyslowy" value="1"/>
+              <input type="radio" id="konwencjonalny" name="pomyslowy" value="17.5"/>
+              <input type="radio" id="raczej-konwencjonalny" name="pomyslowy" value="34"/>
+              <input type="radio" id="pomyslowy-neutralny" name="pomyslowy" value="50.5"/>
+              <input type="radio" id="raczej-pomyslowy" name="pomyslowy" value="67"/>
+              <input type="radio" id="pomyslowy" name="pomyslowy" value="83.5"/>
+              <input type="radio" id="zdecydowanie-pomyslowy" name="pomyslowy" value="100"/>
+            <label for="zdecydowanie-pomyslowy">pomysłowy</label>
+          </div>
+          <div class="surv-bar"></div>
+          <div class="surv-inp">
+            <label for="zdecydowanie-zwykly">zwykły</label>
+              <input type="radio" id="zdecydowanie-zwykly" name="skrajny" value="1"/>
+              <input type="radio" id="zwykly" name="skrajny" value="17.5"/>
+              <input type="radio" id="raczej-zwykly" name="skrajny" value="34"/>
+              <input type="radio" id="skrajny-neutralny" name="skrajny" value="50.5"/>
+              <input type="radio" id="raczej-skrajny" name="skrajny" value="67"/>
+              <input type="radio" id="skrajny" name="skrajny" value="83.5"/>
+              <input type="radio" id="zdecydowanie-skrajny" name="skrajny" value="100"/>
+            <label for="zdecydowanie-skrajny">skrajny</label>
+          </div>
+          <div class="surv-bar"></div>
+          <div class="surv-inp">
+            <label for="wyglad" class="q-lab">Czy uważasz, że wygląd strony ma wpływ na jej odbiór?</label><br/>
+            <input type="radio" id="wyglad-yes" name="wyglad" value="yes"/>
+            <label for="wyglad-yes">Tak</label>
+            <input type="radio" id="wyglad-no" name="wyglad" value="no"/>
+            <label for="wyglad-no">Nie</label>
+          </div>
+          <div class="surv-bar"></div>
+          <div class="surv-inp">
+            <label for="intuicja" class="q-lab">Czy korzystanie ze strony było dla Ciebie intuicyjne?</label><br/>
+            <input type="radio" id="intuicja-yes" name="intuicja" value="yes"/>
+            <label for="intuicja-yes">Tak</label>
+            <input type="radio" id="intuicja-no" name="intuicja" value="no"/>
+            <label for="intuicja-no">Nie</label>
+          </div>
+          <div class="surv-bar"></div>
+          <div class="surv-inp">
+            <label for="sekcja" class="q-lab">Która sekcja najbardziej zwróciła Twoją uwagę?</label><br/>
+            <input type="radio" id="sekcja-whyux" name="sekcja" value="whyux"/>
+            <label for="sekcja-whyux">Dlaczego UX</label>
+            <input type="radio" id="sekcja-historia" name="sekcja" value="history"/>
+            <label for="sekcja-historia">Historia</label>
+            <input type="radio" id="sekcja-anim" name="sekcja" value="anim"/>
+            <label for="sekcja-anim">Animacje</label>
+            <input type="radio" id="sekcja-seo" name="sekcja" value="seo"/>
+            <label for="sekcja-seo">Pozycjonowanie</label>
+            <input type="radio" id="sekcja-web" name="sekcja" value="web"/>
+            <label for="sekcja-web">UX i Web design</label>
+          </div>
+          <div class="surv-bar"></div>
+          <div class="surv-inp">
+            <label for="device" class="q-lab">Na jakim urządzeniu przeglądałeś stronę?</label><br/>
+            <input type="radio" id="device-lap" name="device" value="laptop"/>
+            <label for="device-lap">Laptop/komputer</label>
+            <input type="radio" id="device-tab" name="device" value="tablet"/>
+            <label for="device-tab">Tablet</label>
+            <input type="radio" id="device-phone" name="device" value="phone"/>
+            <label for="device-phone">Smartphone</label>
+          </div>
+        </form>
+        <button id="send-form-btn">Wyślij odpowiedzi</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <h5>Ewa Hechsman, 2021</h5>
+    <ul>
+      <li><a href="https://github.com/hechsewa/">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/ewahechsman/">LinkedIn</a></li>
+      <li><a href="mailto:ewahechsman@gmail.com">Email</a></li>
+    </ul>
+  </footer>
+
+</body></html>

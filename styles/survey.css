@@ -1,0 +1,49 @@
+#survey h2 {
+  font-family: 'Sansita', sans-serif;
+  font-size: 50px;
+  font-style: italic;
+}
+#survey p {
+  font-size: 18px;
+}
+
+.surv-text {
+  display: flex;
+  column-gap: 100px;
+}
+
+.surv-text img {
+  width: 300px;
+  height: auto;
+  margin-left: 30px;
+}
+
+/*form */
+.surv-form label {
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.surv-form .surv-inp {
+  margin-top:40px;
+  margin-bottom: 40px;
+}
+
+.surv-form input {
+  font-family: 'Karla', sans-serif;
+  font-size: 18px;
+  color: black;
+  margin-top: 10px;
+}
+
+.surv-form .surv-bar {
+  height: 2px;
+  width: 20vw;
+  background-color: #139686;
+}
+.surv-form h3 {
+  color: #139686;
+  font-family: 'Karla', sans-serif;
+  font-size: 24px;
+}

@@ -38,3 +38,11 @@ footer {
   min-height: 80px;
   margin-top: auto;
 }
+
+.buttons {
+  display: flex;
+  column-gap: 50px;
+}
+#btn-wide {
+  width: 220px;
+}
