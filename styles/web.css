@@ -1,0 +1,30 @@
+#web img {
+  width: 80vw;
+  height: auto;
+}
+
+#web p {
+  font-size: 18px;
+}
+
+#web h2 {
+  color: #139686;
+  font-family: 'Sansita', sans-serif;
+  font-size: 50px;
+}
+
+#web h4 {
+  color: #139686;
+  font-family: 'Sansita', sans-serif;
+  font-size: 22px;
+}
+
+#web ul li {
+  color: #139686;
+  margin-bottom: 50px;
+}
+
+.web-par {
+  margin-bottom: 80px;
+  margin-top: 80px;
+}
