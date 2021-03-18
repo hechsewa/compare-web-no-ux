@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <link rel="stylesheet" href="../styles/main.css">
 <link rel="stylesheet" href="../styles/survey.css">
+<!---FIREBASE-->
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-auth.js"></script>
+<script src="../dataCon.js"></script>
+<!---FIREBASE END-->
+
 <body>
   <nav>
     <h2>User Experience</h2>
@@ -28,15 +36,15 @@
       </div>
       <div class="surv-form">
           <div class="surv-inp">
-            <label for="name">Pseudonim:</label><br/>
+            <label for="name" id="for-name">Pseudonim:</label><br/>
             <input type="text" id="name" name="name"/>
           </div>
           <div class="surv-inp">
-            <label for="age">Wiek:</label><br/>
+            <label for="age" id="for-age">Wiek:</label><br/>
             <input type="number" id="age" name="age"/>
           </div>
           <div class="surv-inp">
-            <label for="gender">Płeć:</label><br/>
+            <label for="gender" id="for-gender">Płeć:</label><br/>
             <div class="surv-radio">
               <input type="radio" id="female" name="gender" value="female"/>
               <label for="female">Kobieta</label>
@@ -49,6 +57,7 @@
           <h3>Określ tą wersję serwisu:</h3>
           <div class="surv-bar"></div>
           <div class="surv-inp">
+            <label id="for-wspierajacy">1.</label>
             <label for="zdecydowanie-przeszkadzajacy">przeszkadzający</label>
               <input type="radio" id="zdecydowanie-przeszkadzajacy" name="wspierajacy" value="1"/>
               <input type="radio" id="przeszkadzajacy" name="wspierajacy" value="17.5"/>
@@ -61,6 +70,7 @@
           </div>
           <div class="surv-bar"></div>
           <div class="surv-inp">
+            <label id="for-latwy">2.</label>
             <label for="zdecydowanie-skomplikowany">skomplikowany</label>
               <input type="radio" id="zdecydowanie-skomplikowany" name="latwy" value="1"/>
               <input type="radio" id="skomplikowany" name="latwy" value="17.5"/>
@@ -73,6 +83,7 @@
           </div>
           <div class="surv-bar"></div>
           <div class="surv-inp">
+            <label id="for-efektywny">3.</label>
             <label for="zdecydowanie-nieefektywny">nieefektywny</label>
               <input type="radio" id="zdecydowanie-nieefektywny" name="efektywny" value="1"/>
               <input type="radio" id="nieefektywny" name="efektywny" value="17.5"/>
@@ -85,6 +96,7 @@
           </div>
           <div class="surv-bar"></div>
           <div class="surv-inp">
+            <label id="for-przejrzysty">4.</label>
             <label for="zdecydowanie-zagmatwany">zagmatwany</label>
               <input type="radio" id="zdecydowanie-zagmatwany" name="przejrzysty" value="1"/>
               <input type="radio" id="zagmatwany" name="przejrzysty" value="17.5"/>
@@ -97,6 +109,7 @@
           </div>
           <div class="surv-bar"></div>
           <div class="surv-inp">
+            <label id="for-ekscytujacy">5.</label>
             <label for="zdecydowanie-nudny">nudny</label>
               <input type="radio" id="zdecydowanie-nudny" name="ekscytujacy" value="1"/>
               <input type="radio" id="nudny" name="ekscytujacy" value="17.5"/>
@@ -109,11 +122,12 @@
           </div>
           <div class="surv-bar"></div>
           <div class="surv-inp">
+            <label id="for-interesujacy">6.</label>
             <label for="zdecydowanie-nieinteresujacy">nieinteresujący</label>
               <input type="radio" id="zdecydowanie-nieinteresujacy" name="interesujacy" value="1"/>
               <input type="radio" id="nieinteresujacy" name="interesujacy" value="17.5"/>
               <input type="radio" id="raczej-nieinteresujacy" name="interesujacy" value="34"/>
-              <input type="radio" id="interesujacy-neutralny" name="wspierinteresujacyajacy" value="50.5"/>
+              <input type="radio" id="interesujacy-neutralny" name="interesujacy" value="50.5"/>
               <input type="radio" id="raczej-interesujacy" name="interesujacy" value="67"/>
               <input type="radio" id="interesujacy" name="interesujacy" value="83.5"/>
               <input type="radio" id="zdecydowanie-interesujacy" name="interesujacy" value="100"/>
@@ -121,6 +135,7 @@
           </div>
           <div class="surv-bar"></div>
           <div class="surv-inp">
+            <label id="for-pomyslowy">7.</label>
             <label for="zdecydowanie-konwencjonalny">konwencjonalny</label>
               <input type="radio" id="zdecydowanie-konwencjonalny" name="pomyslowy" value="1"/>
               <input type="radio" id="konwencjonalny" name="pomyslowy" value="17.5"/>
@@ -133,6 +148,7 @@
           </div>
           <div class="surv-bar"></div>
           <div class="surv-inp">
+            <label id="for-skrajny">8.</label>
             <label for="zdecydowanie-zwykly">zwykły</label>
               <input type="radio" id="zdecydowanie-zwykly" name="skrajny" value="1"/>
               <input type="radio" id="zwykly" name="skrajny" value="17.5"/>
@@ -145,7 +161,7 @@
           </div>
           <div class="surv-bar"></div>
           <div class="surv-inp">
-            <label for="wyglad" class="q-lab">Czy uważasz, że wygląd strony ma wpływ na jej odbiór?</label><br/>
+            <label for="wyglad" class="q-lab" id="for-wyglad">Czy uważasz, że wygląd strony ma wpływ na jej odbiór?</label><br/>
             <input type="radio" id="wyglad-yes" name="wyglad" value="yes"/>
             <label for="wyglad-yes">Tak</label>
             <input type="radio" id="wyglad-no" name="wyglad" value="no"/>
@@ -153,7 +169,7 @@
           </div>
           <div class="surv-bar"></div>
           <div class="surv-inp">
-            <label for="intuicja" class="q-lab">Czy korzystanie ze strony było dla Ciebie intuicyjne?</label><br/>
+            <label for="intuicja" class="q-lab" id="for-intuicja">Czy korzystanie ze strony było dla Ciebie intuicyjne?</label><br/>
             <input type="radio" id="intuicja-yes" name="intuicja" value="yes"/>
             <label for="intuicja-yes">Tak</label>
             <input type="radio" id="intuicja-no" name="intuicja" value="no"/>
@@ -161,7 +177,7 @@
           </div>
           <div class="surv-bar"></div>
           <div class="surv-inp">
-            <label for="sekcja" class="q-lab">Która sekcja najbardziej zwróciła Twoją uwagę?</label><br/>
+            <label for="sekcja" class="q-lab" id="for-sekcja">Która sekcja najbardziej zwróciła Twoją uwagę?</label><br/>
             <input type="radio" id="sekcja-whyux" name="sekcja" value="whyux"/>
             <label for="sekcja-whyux">Dlaczego UX</label>
             <input type="radio" id="sekcja-historia" name="sekcja" value="history"/>
@@ -175,7 +191,7 @@
           </div>
           <div class="surv-bar"></div>
           <div class="surv-inp">
-            <label for="device" class="q-lab">Na jakim urządzeniu przeglądałeś stronę?</label><br/>
+            <label for="device" class="q-lab" id="for-device">Na jakim urządzeniu przeglądałeś stronę?</label><br/>
             <input type="radio" id="device-lap" name="device" value="laptop"/>
             <label for="device-lap">Laptop/komputer</label>
             <input type="radio" id="device-tab" name="device" value="tablet"/>
@@ -184,7 +200,7 @@
             <label for="device-phone">Smartphone</label>
           </div>
         </form>
-        <button id="send-form-btn">Wyślij odpowiedzi</button>
+        <button id="send-form-btn" onclick="submitData()">Wyślij odpowiedzi</button>
       </div>
     </section>
   </main>
