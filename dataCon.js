@@ -143,4 +143,6 @@ function submitData() {
   answers.push(u_q5); answers.push(u_q6); answers.push(u_q7); answers.push(u_q8);
   answers.push(u_wyglad); answers.push(u_intuicja); answers.push(u_sekcja); answers.push(u_device);
   writeData();
+  console.log("send");
+  window.open("thanks.html", "_self");
 }

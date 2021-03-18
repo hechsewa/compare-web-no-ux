@@ -1,0 +1,42 @@
+#thanks h2 {
+  font-family: 'Sansita', sans-serif;
+  font-size: 50px;
+  font-style: italic;
+  text-align: center;
+} 
+
+#thanks h4 {
+  font-family: 'Karla', sans-serif;
+  font-size: 25px;
+  text-align: center;
+  color: white;
+}
+
+.thank-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 50px;
+}
+
+/*footer styling */
+body  {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  min-height: 80px;
+  margin-top: auto;
+}
+
+#thanks {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -90px;
+  row-gap: 25px;
+}
