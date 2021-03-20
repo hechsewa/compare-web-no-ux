@@ -17,7 +17,7 @@ var empties = [];
 var u_name, u_age, u_gender, u_q1, u_q2, u_q3, u_q4, u_q5, u_q6, u_q7, u_q8, u_wyglad, u_intuicja, u_sekcja, u_device;
 
 async function writeData() {
-  var userId = firebase.database().ref('Survey-noux').path.pieces_.length + 1;
+  var userId = Math.random().toString().substr(2, 8); 
   console.log(userId);
   const surveyRef = firebase.database().ref('Survey-noux/'+userId);
   const survey = {
