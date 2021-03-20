@@ -1,24 +1,26 @@
-  var firebaseConfig = {
-    apiKey: "AIzaSyAPHAFZE26yka8A0zpjGmzBRHiMfDsXzZk",
-    authDomain: "ux-web.firebaseapp.com",
-    databaseURL: "https://ux-web-default-rtdb.firebaseio.com",
-    projectId: "ux-web",
-    storageBucket: "ux-web.appspot.com",
-    messagingSenderId: "838505754949",
-    appId: "1:838505754949:web:98ef87d418924c20714e2c",
-    measurementId: "G-862LL0WWS5"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
+var firebaseConfig = {
+  apiKey: "AIzaSyAPHAFZE26yka8A0zpjGmzBRHiMfDsXzZk",
+  authDomain: "ux-web.firebaseapp.com",
+  databaseURL: "https://ux-web-default-rtdb.firebaseio.com",
+  projectId: "ux-web",
+  storageBucket: "ux-web.appspot.com",
+  messagingSenderId: "838505754949",
+  appId: "1:838505754949:web:98ef87d418924c20714e2c",
+  measurementId: "G-862LL0WWS5"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
 var answers = [];
 var empties = [];
 var u_name, u_age, u_gender, u_q1, u_q2, u_q3, u_q4, u_q5, u_q6, u_q7, u_q8, u_wyglad, u_intuicja, u_sekcja, u_device;
 
-function writeData() {
-  const surveyRef = firebase.database().ref('Survey-noux');
-    const survey = {
+async function writeData() {
+  var userId = firebase.database().ref('Survey-noux').path.pieces_.length + 1;
+  console.log(userId);
+  const surveyRef = firebase.database().ref('Survey-noux/'+userId);
+  const survey = {
         name: answers[0],
         age: answers[1],
         gender: answers[2],
@@ -35,8 +37,8 @@ function writeData() {
         section: answers[13],
         device: answers[14],
     };
-  console.log("wysłano");
-  surveyRef.push(survey);
+  const prom = await surveyRef.set(survey);
+  return prom;
 }
 
 function getRadio(name){
@@ -113,7 +115,7 @@ function checkValues() {
   }
 }
 
-function submitData() {
+async function submitData() {
   u_name = document.getElementById("name").value;
   u_age = document.getElementById("age").value;
   u_gender = getRadio("gender");
@@ -141,7 +143,7 @@ function submitData() {
   answers.push(u_q1); answers.push(u_q2); answers.push(u_q3); answers.push(u_q4);
   answers.push(u_q5); answers.push(u_q6); answers.push(u_q7); answers.push(u_q8);
   answers.push(u_wyglad); answers.push(u_intuicja); answers.push(u_sekcja); answers.push(u_device);
-  writeData();
+  await writeData();
   console.log("send");
   window.open("thanks.html", "_self");
 }
