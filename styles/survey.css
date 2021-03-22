@@ -1,5 +1,5 @@
 #survey h2 {
-  font-family: 'Sansita', sans-serif;
+  font-family: 'Times New Roman', sans-serif;
   font-size: 50px;
   font-style: italic;
 }
@@ -20,7 +20,7 @@
 
 /*form */
 .surv-form label {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: 18px;
   color: white;
 }
@@ -31,7 +31,7 @@
 }
 
 .surv-form input {
-  font-family: 'Karla', sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: 18px;
   color: black;
   margin-top: 10px;
@@ -44,6 +44,6 @@
 }
 .surv-form h3 {
   color: #139686;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: 24px;
 }
